@@ -148,4 +148,33 @@ mysql> select count(state) from addressbook;
 1 row in set (0.00 sec)
 
 mysql>
+-----------------------------------------------------------------------UC8----------------------------------------------------------------------------------------------
 
+mysql> select * from addressbook;
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+
+| first_name | last_name | address       | city       | state         | zip    | phone_number | email                        | serial_number |
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+
+| srinu      | VAKAMULLU | chinthada     | vizag      | ANDHRAPRADESH | 532829 |    834125446 | srinuvakamullu@gmail.com     |          NULL |
+| komalarao  | VAKAMULLU | amadalavalasa | srikakulam | ANDHRAPRADESH | 532418 |    834125446 | komalaraovakamullu@gmail.com |          NULL |
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from addressbook order by city;
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+
+| first_name | last_name | address       | city       | state         | zip    | phone_number | email                        | serial_number |
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+
+| komalarao  | VAKAMULLU | amadalavalasa | srikakulam | ANDHRAPRADESH | 532418 |    834125446 | komalaraovakamullu@gmail.com |          NULL |
+| srinu      | VAKAMULLU | chinthada     | vizag      | ANDHRAPRADESH | 532829 |    834125446 | srinuvakamullu@gmail.com     |          NULL |
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from addressbook order by first_name;
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+
+| first_name | last_name | address       | city       | state         | zip    | phone_number | email                        | serial_number |
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+
+| komalarao  | VAKAMULLU | amadalavalasa | srikakulam | ANDHRAPRADESH | 532418 |    834125446 | komalaraovakamullu@gmail.com |          NULL |
+| srinu      | VAKAMULLU | chinthada     | vizag      | ANDHRAPRADESH | 532829 |    834125446 | srinuvakamullu@gmail.com     |          NULL |
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+
+2 rows in set (0.00 sec)
+
+mysql>
