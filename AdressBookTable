@@ -178,3 +178,40 @@ mysql> select * from addressbook order by first_name;
 2 rows in set (0.00 sec)
 
 mysql>
+-----------------------------------------------------------------------------UC9-----------------------------------------------------------------------------------------
+
+mysql> update addressbook set type='family' where first_name='srinu';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  update addressbook set type='friend' where first_name='komalarao';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  select * from addressbook;
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+--------+
+| first_name | last_name | address       | city       | state         | zip    | phone_number | email                        | serial_number | type   |
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+--------+
+| srinu      | VAKAMULLU | chinthada     | vizag      | ANDHRAPRADESH | 532829 |    834125446 | srinuvakamullu@gmail.com     |          NULL | family |
+| komalarao  | VAKAMULLU | amadalavalasa | srikakulam | ANDHRAPRADESH | 532418 |    834125446 | komalaraovakamullu@gmail.com |          NULL | friend |
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+--------+
+2 rows in set (0.00 sec)
+
+mysql> update addressbook set serial_number=1 where first_name='srinu';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update addressbook set serial_number=2 where first_name='komalarao';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook;
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+--------+
+| first_name | last_name | address       | city       | state         | zip    | phone_number | email                        | serial_number | type   |
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+--------+
+| srinu      | VAKAMULLU | chinthada     | vizag      | ANDHRAPRADESH | 532829 |    834125446 | srinuvakamullu@gmail.com     |             1 | family |
+| komalarao  | VAKAMULLU | amadalavalasa | srikakulam | ANDHRAPRADESH | 532418 |    834125446 | komalaraovakamullu@gmail.com |             2 | friend |
++------------+-----------+---------------+------------+---------------+--------+--------------+------------------------------+---------------+--------+
+2 rows in set (0.00 sec)
+
+mysql>
