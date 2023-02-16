@@ -130,5 +130,22 @@ mysql> select * from addressbook where state='andhrapradesh';
 2 rows in set (0.00 sec)
 
 mysql>
+-----------------------------------------------------UC7---------------------------------------------------------------------------------------------------------------------
 
+mysql> select count(city) from addressbook;
++-------------+
+| count(city) |
++-------------+
+|           2 |
++-------------+
+1 row in set (0.01 sec)
+mysql> select count(state) from addressbook;
++--------------+
+| count(state) |
++--------------+
+|            2 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql>
 
