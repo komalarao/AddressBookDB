@@ -96,3 +96,23 @@ mysql> select * from addressbook;
 | srinu      | VAKAMULLU | chinthada     | vizag      | ANDHRAPRADESH | 532418 |    834125446 | srinuvakamullu@gmail.com   |
 +------------+-----------+---------------+------------+---------------+--------+--------------+----------------------------+
 2 rows in set (0.00 sec)
+-----------------------------------------------------------------UC4-UPDATE DETAILS------------------------------------------------------------------------------------
+
+mysql> update addressbook set zip=532001 where first_name='komalarao';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  update addressbook set zip=532829 where first_name='srinu';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook;
++------------+-----------+---------------+------------+---------------+--------+--------------+----------------------------+---------------+
+| first_name | last_name | address       | city       | state         | zip    | phone_number | email                      | serial_number |
++------------+-----------+---------------+------------+---------------+--------+--------------+----------------------------+---------------+
+| KOMALARAO  | VAKAMULLU | AMADALAVALASA | SRIKAKULAM | ANDHRAPRADESH | 532001 |    834128446 | manoharvakamullu@gmail.com |          NULL |
+| srinu      | VAKAMULLU | chinthada     | vizag      | ANDHRAPRADESH | 532829 |    834125446 | srinuvakamullu@gmail.com   |          NULL |
++------------+-----------+---------------+------------+---------------+--------+--------------+----------------------------+---------------+
+2 rows in set (0.00 sec)
+
+mysql>
